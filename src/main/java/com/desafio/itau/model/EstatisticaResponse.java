@@ -10,7 +10,7 @@ public class EstatisticaResponse implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @NotNull
-    private Integer count;
+    private long count;
 
     @NotNull
     private Double sum;
@@ -27,7 +27,7 @@ public class EstatisticaResponse implements Serializable {
     public EstatisticaResponse() {
     }
 
-    public EstatisticaResponse(Integer count, Double sum, Double avg, Double min, Double max) {
+    public EstatisticaResponse(long count, Double sum, Double avg, Double min, Double max) {
         this.count = count;
         this.sum = sum;
         this.avg = avg;
@@ -35,11 +35,11 @@ public class EstatisticaResponse implements Serializable {
         this.max = max;
     }
 
-    public Integer getCount() {
+    public long getCount() {
         return count;
     }
 
-    public void setCount(Integer count) {
+    public void setCount(long count) {
         this.count = count;
     }
 
