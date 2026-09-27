@@ -15,5 +15,8 @@ public class TransacaoService {
     public TransacaoService() {
         transacoes = new ArrayList<>();
     }
-    
+
+    public void criarTransacao(TransacaoRequest transacaoRequest) {
+        transacoes.add(new Transacao(transacaoRequest.getValor(), transacaoRequest.getDataHora()));
+    }
 }
