@@ -19,4 +19,8 @@ public class TransacaoService {
     public void criarTransacao(TransacaoRequest transacaoRequest) {
         transacoes.add(new Transacao(transacaoRequest.getValor(), transacaoRequest.getDataHora()));
     }
+
+    public void deleteTransacao() {
+        transacoes.clear();
+    }
 }
