@@ -11,6 +11,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface EstatisticaControllerDocs {
 
     @Operation(summary = "Gerar Estatística", description = "Gerar Estatística", tags = {"Estatística"}, responses = {
-            @ApiResponse(description = "Success", responseCode = "200", content = @Content(mediaType = MediaType.APPLICATION_JSON_VALUE))})
+            @ApiResponse(description = "OK", responseCode = "200", content = @Content(mediaType = MediaType.APPLICATION_JSON_VALUE))})
     ResponseEntity<EstatisticaResponse> estatisticaTransacao(@RequestParam("tempo") Integer tempo);
 }
