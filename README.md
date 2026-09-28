@@ -107,18 +107,6 @@ Quando não houver transações nos últimos 60 segundos:
 }
 ```
 
-### Período
-
-O intervalo utilizado para o cálculo das estatísticas é configurável.
-
-Valor padrão:
-
-```properties
-estatisticas.periodo-segundos=60
-```
-
----
-
 # Validações
 
 As transações são validadas antes de serem armazenadas.
