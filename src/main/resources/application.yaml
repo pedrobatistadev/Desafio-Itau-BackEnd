@@ -1,3 +1,7 @@
 spring:
   application:
     name: itau
+spring-doc:
+  paths-to-match: /**
+  swagger-ui:
+    path: /swagger
