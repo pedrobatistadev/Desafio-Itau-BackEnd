@@ -9,19 +9,14 @@ public class EstatisticaResponse implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @NotNull
     private long count;
 
-    @NotNull
     private Double sum;
 
-    @NotNull
     private Double avg;
 
-    @NotNull
     private Double min;
 
-    @NotNull
     private Double max;
 
     public EstatisticaResponse() {
