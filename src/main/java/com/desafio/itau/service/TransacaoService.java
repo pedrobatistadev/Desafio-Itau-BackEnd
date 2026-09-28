@@ -30,6 +30,14 @@ public class TransacaoService {
                 .mapToDouble((t) -> t.getValor())
                 .summaryStatistics();
 
+        if (estatisticas.getCount() == 0) {
+            return new EstatisticaResponse(0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0);
+        }
+
         return new EstatisticaResponse(estatisticas.getCount(),estatisticas.getSum(),estatisticas.getAverage(),estatisticas.getMin(),estatisticas.getMax());
     }
 
