@@ -41,6 +41,14 @@ public class Transacao implements Serializable {
     }
 
     @Override
+    public String toString() {
+        return "Transacao{" +
+                "valor=" + valor +
+                ", dataHora=" + dataHora +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (!(o instanceof Transacao transacaoRequest)) return false;
         return Objects.equals(valor, transacaoRequest.valor) && Objects.equals(dataHora, transacaoRequest.dataHora);
