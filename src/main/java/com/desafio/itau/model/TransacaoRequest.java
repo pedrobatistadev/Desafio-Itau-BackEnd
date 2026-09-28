@@ -18,7 +18,7 @@ public class TransacaoRequest implements Serializable {
 
     @NotNull
     @PastOrPresent
-    private OffsetDateTime dataHora;
+    private OffsetDateTime dataHora = OffsetDateTime.now();
 
     public TransacaoRequest() {
     }
