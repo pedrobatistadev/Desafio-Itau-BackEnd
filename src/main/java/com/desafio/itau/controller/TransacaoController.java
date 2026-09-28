@@ -24,11 +24,6 @@ public class TransacaoController implements TransacaoControllerDocs {
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
-    @GetMapping(value = "/estatistica", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<EstatisticaResponse> estatisticaTransacao() {
-        return ResponseEntity.status(HttpStatus.OK).body(service.estatisticaTransacao());
-    }
-
     @DeleteMapping(value = "/transacao")
     public ResponseEntity<?> deleteTransacao() {
         service.deleteTransacao();
