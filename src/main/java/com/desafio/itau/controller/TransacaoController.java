@@ -28,4 +28,10 @@ public class TransacaoController implements TransacaoControllerDocs {
     public ResponseEntity<EstatisticaResponse> estatisticaTransacao() {
         return ResponseEntity.status(HttpStatus.OK).body(service.estatisticaTransacao());
     }
+
+    @DeleteMapping(value = "/transacao")
+    public ResponseEntity<?> deleteTransacao() {
+        service.deleteTransacao();
+        return ResponseEntity.status(HttpStatus.OK).build();
+    }
 }
