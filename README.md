@@ -136,7 +136,7 @@ Os dados são perdidos quando a aplicação é encerrada.
 A documentação da API está disponível através do Swagger UI:
 
 ```text
-http://localhost:8080/swagger-ui/index.html
+http://localhost:8080/swagger
 ```
 
 ---
