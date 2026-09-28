@@ -2,7 +2,7 @@
 
 API REST desenvolvida em **Java 21** e **Spring Boot** para o Desafio de Programação do Itaú Unibanco.
 
-A aplicação recebe transações, armazena os dados em memória e disponibiliza estatísticas referentes às transações realizadas nos últimos 60 segundos.
+A aplicação recebe transações, armazena os dados em memória e disponibiliza estatísticas referentes às transações realizadas nos últimos 60 segundos(Configurável).
 
 ## Tecnologias
 
