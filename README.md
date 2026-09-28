@@ -138,26 +138,6 @@ A documentação da API está disponível através do Swagger UI:
 ```text
 http://localhost:8080/swagger
 ```
-
----
-
-# Estrutura do projeto
-
-```text
-src/
-├── main/
-│   └── java/
-│       └── com/desafio/itau/
-│           ├── controller/
-│           ├── model/
-│           ├── service/
-│           └── ...
-│
-└── test/
-    └── java/
-        └── com/desafio/itau/
-```
-
 ---
 
 # Requisitos do desafio
