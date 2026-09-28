@@ -9,6 +9,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -19,7 +20,7 @@ public class EstatisticaController implements EstatisticaControllerDocs {
     private TransacaoService service;
 
     @GetMapping(value = "/estatistica", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<EstatisticaResponse> estatisticaTransacao() {
-        return ResponseEntity.status(HttpStatus.OK).body(service.estatisticaTransacao());
+    public ResponseEntity<EstatisticaResponse> estatisticaTransacao(@RequestParam(value = "tempo", defaultValue = "60") Integer tempo) {
+        return ResponseEntity.status(HttpStatus.OK).body(service.estatisticaTransacao(tempo));
     }
 }

@@ -30,12 +30,12 @@ public class TransacaoService {
         transacoes.add(new Transacao(transacaoRequest.getValor(), transacaoRequest.getDataHora()));
     }
 
-    public EstatisticaResponse estatisticaTransacao() {
+    public EstatisticaResponse estatisticaTransacao(Integer tempo) {
         logger.warn("Gerando estatísticas de transações: " + transacoes);
 
         OffsetDateTime agora = OffsetDateTime.now();
         DoubleSummaryStatistics estatisticas = transacoes.stream()
-                .filter((t) -> t.getDataHora().isAfter(agora.minusSeconds(60)))
+                .filter((t) -> t.getDataHora().isAfter(agora.minusSeconds(tempo)))
                 .mapToDouble((t) -> t.getValor())
                 .summaryStatistics();
 
