@@ -23,4 +23,9 @@ public class TransacaoController implements TransacaoControllerDocs {
         service.criarTransacao(transacaoRequest);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
+
+    @GetMapping(value = "/estatistica", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<EstatisticaResponse> estatisticaTransacao() {
+        return ResponseEntity.status(HttpStatus.OK).body(service.estatisticaTransacao());
+    }
 }
